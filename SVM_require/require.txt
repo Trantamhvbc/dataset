@@ -1,0 +1,9 @@
+Bài tập SVM :
+Yêu cầu :
+	- Tiền xử lý dữ liệu đã cho thành đầu vào cho bộ phân loại SVM.
+	-  Sử dụng kiến thức SVM đã học để phân loại bộ dữ liệu MNIST of handwritten dataset. 
+	- Tùy chỉnh các tham số như C (Regularization parameter), coef , degree,... khi sử dụng thư viện sklearn.svm.SVC và tùy chỉnh qua lại giữa các loại kernel . 		Từ đó, so sánh performance giữa chúng .
+
+Mô tả dữ liệu :
+MNIST of handwritten dataset là bộ dữ liệu chữ viết tay gồm 60,000 training images và 10,000 testing images dùng để phân loại 10 lớp là các chữ số 0 -> 9. Mỗi ảnh : 28*28 pxs . Chi tiết cụ thể : https://en.wikipedia.org/wiki/MNIST_database. 
+

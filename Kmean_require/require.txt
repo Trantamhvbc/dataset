@@ -1,0 +1,21 @@
+Cho tập dữ liệu: http://qwone.com/~jason/20Newsgroups/. Tập dữ liệu này gồm khoảng 20.000 bài báo thuộc 20 lĩnh vực khác nhau. Ở bài này, để cho đơn giản thì mỗi bài báo đã được chuyển về dạng vector bằng cách lấy tf-idf.
+train: https://drive.google.com/file/d/1Q3pK_E3Lh4gZyhTwD0zdkP43xXSxhI9a/view?usp=sharing
+test: https://drive.google.com/file/d/12RusKPGSN39yZ6QDAhKRGUJoaupmMW63/view?usp=sharing
+từ điển: https://drive.google.com/file/d/1plyQ47OK8ClD7dxhsP1Hc_0euMCYK5Yi/view?usp=sharing
+
+Thực hiện thuật toán kmean trên tập dữ liệu trên, sau đó sử dụng giá trị nhãn để đánh giá các tiêu chí độ đo trên tập dữ liệu training: Purity, NMI (sử dụng nhãn lớp), Root-mean-square standard deviation (RMSSTD), R-squared, Dunn index, Davies - Bouldin index (không sử dụng nhãn lớp)
+Mô tả: dữ liệu trong các file train và test có dạng:
+
+label<fff>doc_id<fff>vector
+label<fff>doc_id<fff>vector
+….
+label<fff>doc_id<fff>vector
+
+Trong đó vector được biểu diễn dưới dạng ma trận thưa (ví dụ một vector có dạng 
+a = (0, 0, 0, 4, 0, 7, 8, 0, 0, 1) sẽ được biểu diễn thành a = 3:4 5:7 6:8 9:1). Khi thực hiện tính toán cần chuyển vector từ dạng sparse về dạng bình thường (dense).
+File từ điển được biểu diễn dưới dạng:
+word<fff>tf_idf_value
+
+Trong đó word là từ và tf_idf_value là giá trị tf-idf của từ đó (gợi ý: lấy độ dài vector từ file này nhé)
+
+
